@@ -1,6 +1,6 @@
 __version__ = "0.1.0"
 
-def prompt_my_custom_llm(message: str, model="gpt-4o-2024-08-06", image=None):
+def prompt_my_custom_llm(message: str, model=None, image=None):
     """A prompt helper function that sends a message to openAI
     and returns only the text response.
     """
@@ -15,11 +15,9 @@ def prompt_my_custom_llm(message: str, model="gpt-4o-2024-08-06", image=None):
 
     message = [{"role": "user", "content": message}]
 
-    print("model", model[1:])
-
     # submit prompt
     response = client.chat.completions.create(
-        model=model,
+        model="gpt-4o-2024-08-06",
         messages=message
     )
 
