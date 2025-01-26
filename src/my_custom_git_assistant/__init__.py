@@ -1,6 +1,6 @@
 __version__ = "0.1.0"
 
-def prompt_openai(message: str, model="gpt-4o-2024-08-06", image=None):
+def prompt_my_custom_llm(message: str, model="gpt-4o-2024-08-06", image=None):
     """A prompt helper function that sends a message to openAI
     and returns only the text response.
     """
